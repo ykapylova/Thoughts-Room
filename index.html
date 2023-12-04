@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thought room</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio src="audio/bg.mp3" id="audio" loop></audio>
+    <div id="player" onclick="player()">
+        <img src="img/when_pause.png" alt="paused" id="audio_paused">
+        <img src="img/when_play.png" alt="played" id="audio_played">
+    </div>
+    <div class="container">
+        <div id="text1">
+            <div>Добро пожаловать в комнату мыслей!</div>
+            <div id="tip">Нажми Enter &crarr; или коснись экрана, чтобы читать дальше</div>
+        </div>
+        <div id="text2">
+            <div>Здесь ты сможешь открыться себе полностью и быть уверенным, что то, что сказано в Комнате мыслей, расстворяется в ней бесследно...</div>
+        </div>
+        <div id="moving_text">
+            <p id="turning_text"></p>
+        </div>
+        <input placeholder="Просто пиши..." maxlength="50" type="text" name="text" id="text3" autofocus>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/vanta/three.js"></script>
+    <script src="js/vanta/birds.js"></script>
+    <script src="js/script.js"></script></body>
+    <script>
+        VANTA.BIRDS({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        speedLimit: 2.00,
+        separation: 100.00,
+        quantity: 4.00
+        })
+    </script>
+</html>
